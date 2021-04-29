@@ -62,7 +62,7 @@ Depending on your expertise and preferences, your main -game- loop may be placed
 To make your pgUI added text appear you should add the line
 
         UIUser.update()                                     
-to your code *before* the line 'pg.display.update()' and *after* the 'Erase window command'; depending on the relative position to the rest of your existing drawing commands, the pgUI objects will appear *on top of* or at *behind* your game/app objects:
+to your code *before* the line 'pg.display.update()' and *after* the 'Erase window command'; depending on the relative position to the rest of your existing drawing commands, the pgUI objects will appear *on top of* or *behind* your game/app objects:
 ![](https://user-images.githubusercontent.com/64075009/116532848-05012080-a8e1-11eb-922d-f807404ca775.png)
 
 pgUI objects ("Chimp says: Hello world!") appearing on the bottom.
