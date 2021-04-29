@@ -27,8 +27,8 @@ Basic use of pgUI needs only the file 'pgUI.py': either copy-paste it or downloa
 ### 2.- Example: adding a fixed text.
 #### 2.1.- Import module.
 Add the 'import' command to your program
-    import pgUI as UI
 
+    import pgUI as UI
 #### 2.2.- Instance a pgUI user.
     UIUser = UI.user(screen)                               
 'screen' being the pygame window name in your program. This line of code will give access to all the pgUI module resources.
