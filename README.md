@@ -18,8 +18,25 @@ pgUI is a pygame 'sub-library' that gives the user the possibility of adding fun
 
 Chimp game with text added by using pgUI.
 
-## Quick guide.
+## Quick start.
 pgUI has been conceived to be used with a minimum of effort. Please, follow the next steps.
 
-# 1.- Download the file pgUI.py.
+### 1.- Download the file pgUI.py.
+Basic use of pgUI needs only the file 'pgUI.py': either copy-paste it or download it to your working directory.
+
+### 2.- Example: adding a fixed text.
+#### 2.1.- Import module.
+Add the 'import' command to your program
+    import pgUI as UI
+
+#### 2.2.- Instance a pgUI user.
+    UIUser = UI.user(screen)                               
+'screen' being the pygame window name in your program. This line of code will give access to all the pgUI module resources.
+
+#### 2.3.- Add a the text you want to be shown.
+    UIUser.addInfoText(position = (160, 35),                
+                       text = "Chimp says: 'Hello world!'",
+                       colors = [(250,0,0), (255,255,255)])
+this line will force the text "Chimp says: 'Hello world!'" to unconditionally appear at coordinates (160, 35); 'colors' first member is the text color while second color is the background for the text (normally choosen as the game background color).
+
 
