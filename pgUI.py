@@ -9,7 +9,7 @@
 #     effortlessly adding to the basic program active buttons and both      #
 #     fixed or dynamic texts.                                               #
 #                                                                           #
-#     Prerequisites: Python 2.7; pygame 1.9.1                               #
+#     Prerequisites: Python 3.8; pygame 1.9.1                               #
 #                                                                           #
 #     Author: Vicente Fombellida (EIDE Foundation)                          #
 #     email: magf558128m@gmail.com                                          #
