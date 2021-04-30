@@ -1,12 +1,12 @@
 ## Tutorial. Install pgUI. Texts.
 
 ### 1.- Install pgUI.
-Installing pgUI does not need a special procedure. Just download or copy-paste the file pgUI.py to your working folder; once done, all pgUI functions are available by importing it:
+Installing pgUI does not need a special procedure. Just download or copy-paste the file **pgUI.py** to your working folder; once done, all pgUI functions are available by importing it:
 
     import pgUI as UI
 
 ### 2.- Texts.
-(To demonstrate many of the pgUI library capabilities we have chosen a quite simple pygame made game, 'chimp.py'; we have copied it into this repository so that you can download it and test the add-on features. This game is about hitting a moving chimp: the only *feedback* it originally has is a *pirouette* that he -the chimp- performs every time you hit him; we will add the game texts, statistics and buttons to control its functioning).
+(To demonstrate many of the pgUI library capabilities we have chosen a quite simple pygame made game, **'chimp.py'**; we have copied it into this repository so that you can download it and test the add-on features. This game is about hitting a moving chimp: the only *feedback* it originally has is a *pirouette* that he -the chimp- performs every time you hit him; we will add the game texts, statistics and buttons to control its functioning).
 
 #### 2.1.- Instance a pgUI user.
     UIUser = UI.user(screen)                               
