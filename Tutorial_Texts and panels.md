@@ -15,11 +15,11 @@ Installing pgUI does not need a special procedure. Just download or copy-paste t
 'screen' being the pygame window name in your program. This line of code will give access to all the pgUI module resources.
 
 #### 2.2.- Add a text you want to be shown.
-Needless to say, by using pygame you can show texts without using pgUI. the library just eases sowhing them.
+Needless to say, by using pygame you can show texts without using pgUI. The library just eases sowhing them.
     UIUser.addInfoText(position = (160, 35),                
-                       text = "Chimp says: 'Hello world!'",
-                       colors = [(250,0,0), (255,255,255)])
-this line will force the text "Chimp says: 'Hello world!'" to unconditionally appear at coordinates (160, 35); 'colors' first member is the text color while second color is the background for the text (normally chosen as the game background color).
+                       text = "Chimp says: 'Please do not!'",
+                       colors = [(0,250,0), (255,255,255)])
+this line will force the text "Chimp says: 'Please do not!'" to unconditionally appear at coordinates (160, 35); 'colors' first member is the text color while second color is the background for the text (normally chosen as the game background color).
 
 #### 2.4.- Add the pgUI update line to your main loop.
 
@@ -46,4 +46,4 @@ To make your pgUI added text appear you should add the line
 to your code *before* the line 'pg.display.update()' and *after* the 'Erase window command'; depending on the relative position to the rest of your existing drawing commands, the pgUI objects will appear *on top of* or *behind* your game/app objects:
 ![](https://user-images.githubusercontent.com/64075009/116532848-05012080-a8e1-11eb-922d-f807404ca775.png)
 
-pgUI objects ("Chimp says: Hello world!") appearing on the bottom.
+pgUI objects ("Chimp says: 'Please do not!'") appearing behind the chimp.
