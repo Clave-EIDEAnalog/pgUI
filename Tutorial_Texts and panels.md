@@ -8,14 +8,14 @@ Installing pgUI does not need a special procedure. Just download or copy-paste t
     import pgUI as UI
 
 ### 2.- Texts.
-(To demonstrate many of the pgUI library capabilities we have chosen a quite simple pygame made game, **'chimp.py'**; we have copied it into this repository so that you can download it and test the add-on features. This game is about hitting a moving chimp: the only *feedback* it originally has is a *pirouette* that he -the chimp- performs every time you hit him; we will add the game texts, statistics and buttons to control its functioning).
+(To demonstrate many of the pgUI library capabilities we have chosen a quite simple pygame made game, **'chimp.py'**; we have copied it into this repository so that you can download it and test the pgUI add-on features. This game is about hitting a moving chimp: the only *feedback* the game originally has is a *pirouette* that he -the chimp- performs every time you hit him; we will add to the game texts, statistics and buttons to enhance/control its functioning. Should you intend to use this game to follow the tutorial just copy to the downloaded folder -*'CHIMP'*- pgUI.py).
 
 #### 2.1.- Instance a pgUI user.
     UIUser = UI.user(screen)                               
 'screen' being the pygame window name in your program. This line of code will give access to all the pgUI module resources.
 
 #### 2.2.- Add a text you want to be shown.
-Needless to say, by using pygame you can show texts
+Needless to say, by using pygame you can show texts without using pgUI. the library just eases sowhing them.
     UIUser.addInfoText(position = (160, 35),                
                        text = "Chimp says: 'Hello world!'",
                        colors = [(250,0,0), (255,255,255)])
