@@ -34,7 +34,7 @@ Add the 'import' command to your program
     UIUser = UI.user(screen)                               
 'screen' being the pygame window name in your program. This line of code will give access to all the pgUI module resources.
 
-#### 2.3.- Add a the text you want to be shown.
+#### 2.3.- Add the text you want to be shown.
     UIUser.addInfoText(position = (160, 35),                
                        text = "Chimp says: 'Hello world!'",
                        colors = [(250,0,0), (255,255,255)])
