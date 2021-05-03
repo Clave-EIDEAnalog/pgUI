@@ -10,6 +10,7 @@ Installing pgUI does not need a special procedure. Just download or copy-paste t
 
 ### 2.- Texts.
 (To demonstrate many of the pgUI library capabilities we have chosen a quite simple pygame made game, **'chimp.py'**; we have copied it into this repository so that you can download it and test the pgUI add-on features. This game is about hitting a moving chimp: the only *feedback* the game originally has is a *pirouette* that he -the chimp- performs every time you hit him; we will add to the game texts, statistics and buttons to enhance/control its functioning. Should you intend to use this game to follow the tutorial just copy to the downloaded folder -*'CHIMP'*- the file pgUI.py).
+![asdfaf](https://user-images.githubusercontent.com/64075009/116851151-32581200-abf2-11eb-957d-5a0d5a2899e9.png)
 
 #### 2.1.- Instance a pgUI user.
     UIUser = UI.user(screen)                               
@@ -44,7 +45,8 @@ Depending on your expertise and preferences, your main -game- loop may be placed
 To make your pgUI added text appear you should add the line
 
         UIUser.update()                                     
-to your code *before* the line 'pg.display.update()' and *after* the 'Erase window command'; depending on the relative position to the rest of your existing drawing commands, the pgUI objects will appear *on top of* or *behind* your game/app objects:
+inside the main loop
+ *before* the line 'pg.display.update()' and *after* the 'Erase window command'; depending on the relative position to the rest of your existing drawing commands, the pgUI objects will appear *on top of* or *behind* your game/app objects:
 ![](https://user-images.githubusercontent.com/64075009/116716248-cf8b2e80-a9d7-11eb-906e-8468f1847401.png)
 
 pgUI objects ("Chimp says: 'Please do not!'") appearing behind the chimp.
