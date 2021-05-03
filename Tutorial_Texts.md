@@ -49,6 +49,10 @@ To make your pgUI added text appear you should add the line
         UIUser.update()                                     
 inside the main loop
  *before* the line 'pg.display.update()' and *after* the 'Erase window command'; depending on the relative position to the rest of your existing drawing commands, the pgUI objects will appear *on top of* or *behind* your game/app objects:
+ 
 ![](https://user-images.githubusercontent.com/64075009/116716248-cf8b2e80-a9d7-11eb-906e-8468f1847401.png)
 
 pgUI objects ("Chimp says: 'Please do not!'") appearing behind the chimp.
+
+#### 2.4.- Modifying a text to show user progress (score).
+Let's assume that you are a fonder of the chimp game. As it has been already stated, it works fine, but lacks of any systematic feedback so that you can measure your progress. Let's see how to add a score to the game; this score will show, by now, how many times you have succedded hitting the monkey.
