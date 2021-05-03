@@ -55,4 +55,22 @@ inside the main loop
 pgUI objects ("Chimp says: 'Please do not!'") appearing behind the chimp.
 
 #### 2.4.- Modifying a text to show user progress (score).
-Let's assume that you are a fonder of the chimp game. As it has been already stated, it works fine, but lacks of any systematic feedback so that you can measure your progress. Let's see how to add a score to the game; this score will show, by now, how many times you have succedded hitting the monkey.
+Let's assume that you are a fonder of the chimp game. As it has been already stated, it works fine, but lacks of any systematic feedback so that you can measure your progress. Let's see how to add a score to the game; this score will show, by now, how many times you have succedded hitting the monkey: as the original game hasn't it, we will need to add a variable counting mow many times the gamer has kicked the chimp that will be shown -this variable- inside the window game.
+First of all, we have to instance a text that we will modify later according to the score:
+
+    UIUser.addInfoText(position = (550, 35),                
+                       text = "",
+                       colors = [(0,250,0), (255,255,255)])
+                       
+
+*position* being selected for the text appearing to the right of the window; we instance the text blank for the moment.
+
+Now, this has nothing to do specifically with the library, we have to find the place where the *chimp* code detects that the user has hitted the monkey. There are several places: we will use the 'if fist.punch(chimp):' statement -inside the main loop- to update a counter 'hits = hits + 1' (this *hits* counter has to be previously initializated somewhere to '0').
+
+Once we have a counter (*hits*) we need just to show it. For such purpose we will *set* the previously instated text by means of the *setInfoText* method. The line of code may be placed just next to the counter updating; the code looking like that:
+
+                if fist.punch(chimp):
+                    punch_sound.play()  # punch
+                    chimp.punched()
+                    *hits = hits + 1      
+                    UIUser.setInfoText(1, "hits .." + str(hits))* 
