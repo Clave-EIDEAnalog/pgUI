@@ -15,6 +15,8 @@ Installing pgUI does not need a special procedure. Just download or copy-paste t
 Chimp game without any add's
 
 #### 2.1.- Instance a pgUI user.
+You have to instance a pgUI user:
+
     UIUser = UI.user(screen)                               
 'screen' being the pygame window name in your program. This line of code will give access to all the pgUI module resources.
 
@@ -55,7 +57,7 @@ inside the main loop
 
 pgUI objects ("Chimp says: 'Please do not!'") appearing behind the chimp.
 
-#### 2.4.- Modifying a text to show user progress (score).
+#### 2.4.- Example: Modifying a text to show user progress (score).
 Let's assume that you are a fonder of the chimp game. As it has been already stated, it works fine, but lacks of any systematic feedback so that you can measure your progress. Let's see how to add a score to the game; this score will show, by now, how many times you have succedded hitting the monkey: as the original game hasn't it, we will need to add a variable counting mow many times the gamer has kicked the chimp that will be shown -this variable- inside the window game.
 First of all, we have to instance a text that we will modify later according to the score:
 
@@ -73,9 +75,12 @@ Once we have a counter (*hits*) we need just to show it. For such purpose we wil
                 if fist.punch(chimp):
                     punch_sound.play()  # punch
                     chimp.punched()
-                    *hits = hits + 1      
-                    UIUser.setInfoText(1, "hits .." + str(hits))* 
+                    hits = hits + 1                                 # New code
+                    UIUser.setInfoText(1, "hits .." + str(hits))    # New code
+                    
+(The "1" - *UIUser.setInfoText(1, "hits .." + str(hits))*- stands for the pgUI text **number 1**: pgUI assigns to every text you instance a number to further address it)                 
 
 ![](https://user-images.githubusercontent.com/64075009/116856164-f2e1f380-abfa-11eb-993a-bc0c2f94cd06.png)
 
 Monkey beaten 5 times.
+
