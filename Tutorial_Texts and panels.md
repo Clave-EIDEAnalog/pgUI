@@ -10,7 +10,9 @@ Installing pgUI does not need a special procedure. Just download or copy-paste t
 
 ### 2.- Texts.
 (To demonstrate many of the pgUI library capabilities we have chosen a quite simple pygame made game, **'chimp.py'**; we have copied it into this repository so that you can download it and test the pgUI add-on features. This game is about hitting a moving chimp: the only *feedback* the game originally has is a *pirouette* that he -the chimp- performs every time you hit him; we will add to the game texts, statistics and buttons to enhance/control its functioning. Should you intend to use this game to follow the tutorial just copy to the downloaded folder -*'CHIMP'*- the file pgUI.py).
-![asdfaf](https://user-images.githubusercontent.com/64075009/116851151-32581200-abf2-11eb-957d-5a0d5a2899e9.png)
+![](https://user-images.githubusercontent.com/64075009/116851151-32581200-abf2-11eb-957d-5a0d5a2899e9.png)
+
+Chimp game without any add's
 
 #### 2.1.- Instance a pgUI user.
     UIUser = UI.user(screen)                               
