@@ -26,8 +26,6 @@ To instance a new text use the *addInfoText* method the user has:
                        colors = [(0,250,0), (255,255,255)])
 this line will force the text "Chimp says: 'Please do not!'" to unconditionally appear at coordinates (160, 35); 'colors' first member is the text color while second color is the background for the text (normally chosen as the game background color).
 
-![2021-05-03-103131_1280x1024_scrot](https://user-images.githubusercontent.com/64075009/116856164-f2e1f380-abfa-11eb-993a-bc0c2f94cd06.png)
-
 
 #### 2.3.- Add the pgUI update line to your main loop.
 Depending on your expertise and preferences, your main -game- loop may be placed at the end of the code, into a 'if __name__ == "__main__":' (more criptic) statement or in a specific function or method. Wherever it is, its look is something like:
@@ -77,3 +75,7 @@ Once we have a counter (*hits*) we need just to show it. For such purpose we wil
                     chimp.punched()
                     *hits = hits + 1      
                     UIUser.setInfoText(1, "hits .." + str(hits))* 
+
+![](https://user-images.githubusercontent.com/64075009/116856164-f2e1f380-abfa-11eb-993a-bc0c2f94cd06.png)
+
+Monkey beaten 5 times.
