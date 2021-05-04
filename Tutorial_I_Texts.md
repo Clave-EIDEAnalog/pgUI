@@ -59,11 +59,11 @@ inside the main loop
 pgUI objects ("Chimp says: 'Please do not!'") appearing behind the chimp.
 
 #### 2.4.- Example: Modifying a text to show user progress (score).
-Let's assume that you are a fonder of the chimp game. As it has been already stated, it works fine, but lacks of any systematic feedback so that you can measure your progress. Let's see how to add a score to the game; this score will show, by now, how many times you have succedded hitting the monkey: as the original game hasn't it, we will need to add a variable counting mow many times the gamer has kicked the chimp that will be shown -this variable- inside the window game.
+Let's assume that you are a fonder of the chimp game. As it has been already stated, it works fine, but lacks of any systematic feedback so that you can measure your progress. Let's see how to add a score to the game; this score will show, by now, how many times you have succedded hitting the monkey: as the original game hasn't it, we will need to add a variable counting how many times the gamer has kicked the chimp that will be shown -this variable- inside the window game.
 First of all, we have to instance a text that we will modify later according to the score:
 
     UIUser.addInfoText(position = (550, 35),                
-                       text = "",
+                       text = "hits .. 0",
                        colors = [(0,250,0), (255,255,255)])
                        
 
@@ -83,5 +83,5 @@ Once we have a counter (*hits*) we need just to show it. For such purpose we wil
 
 ![](https://user-images.githubusercontent.com/64075009/116856164-f2e1f380-abfa-11eb-993a-bc0c2f94cd06.png)
 
-Monkey beaten 5 times.
+Monkey beaten 5 times (up to now).
 
