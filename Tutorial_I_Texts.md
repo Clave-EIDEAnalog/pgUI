@@ -23,6 +23,7 @@ You have to instance a pgUI user:
 #### 2.2.- Add a text you want to be shown.
 Needless to say, by using pygame you can show texts without using pgUI. The library just eases sowhing them.
 To instance a new text use the *addInfoText* method the user has:
+
     UIUser.addInfoText(position = (160, 35),                
                        text = "Chimp says: 'Please do not!'",
                        colors = [(0,250,0), (255,255,255)])
