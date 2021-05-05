@@ -4,7 +4,7 @@
 # Currently being in preparation!
 
 ## 3.- Insert a text panel.
-In the last tutotral you've learned to insert texts in the pygame window and how to modify them so that the texts show how your game skills progress. By using those *infoTexts* and having a bit of patience you may get also something this stylish:
+In the last tutorial you've learned to insert texts in the pygame window and how to modify them so that the texts show how your game skills progress. By using those *infoTexts* and having a bit of patience you may get also something this stylish:
 
 ![](https://user-images.githubusercontent.com/64075009/117021610-c95ac200-acf7-11eb-860e-3a20e9e23ee0.png)
 
