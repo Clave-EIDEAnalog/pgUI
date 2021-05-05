@@ -1,3 +1,6 @@
+
+https://user-images.githubusercontent.com/64075009/117113098-4a629980-ad8a-11eb-858a-0ae026e24b30.mp4
+
 ## Tutorial_II. Text panels.
 
 # Currently being in preparation!
@@ -13,4 +16,7 @@ To do it by using the tools described in the last paragraph is a bit clumsy: you
 pgUI has a class *textPanel* which takes charge of locating things so that you can forget about it: you just tell pgUI which texts -fixed: left column; variable: right column- you want to form the panel, the position, size ando colors to use and *voilá*, pgUI organizes it all so that you can forget about it.
 
 
+
+
+https://user-images.githubusercontent.com/64075009/117113134-53536b00-ad8a-11eb-8e58-15ea1ee3586a.mp4
 
