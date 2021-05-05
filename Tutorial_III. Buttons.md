@@ -26,7 +26,7 @@ We have designed pgUI such a way that you may add widgets to your project by usi
 
 And then, in the main loop,
 
-            if not(pause):                                     
+    if not(pause):                                     
         allsprites.update()
 
 This will suffice: now you may instate a button by:
