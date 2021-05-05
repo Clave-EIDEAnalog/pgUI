@@ -12,7 +12,7 @@ which shows a complete set of information on the matter.
 
 To do it by using the tools described in the last paragraph is a bit clumsy: you have to calculate widths and heights of texts so that they appear perfectly aligned into columns.
 
-pgUI has a class *textPanel* which takes charge of placing things so that you can forget about it: you just tell pgUI which texts -fixed: left column; variable: right column- you want to form the panel, the position, size ando colors to use and *voilá*, pgUI organizes it all so that you can concentrate on your scenario.
+pgUI has a class *textPanel* which takes charge of placing things so that you can forget about it: you just tell pgUI which texts -fixed: left column; variable: right column- you want to form the panel, the position, size and colors to use and *voilá*, pgUI organizes it all so that you can concentrate again on your scenario.
 
 ## 3.1.- Passing functions as arguments.
 In this tutorial we take for granted that the reader has a solid basis on python/pygame. Nevertheless, we deem appropiate to insist in that, as almost everything in python, a function is an object too, and as such, it can be passed as an argument to another function or method. This property is in the root of how to instance a text panel.
