@@ -87,4 +87,6 @@ and that's all. As pgUI has it's own event detection code, it will detect this *
 
 ### 4.3.- Embellishing buttons.
 
-By this time you shoul have a *pausable* monkey game (try whit 
+By this time you should have a *pausable* monkey game (try whit *pgUI_CHIMP_07_playPause.py* at the CHIMP folder if not). But the button's appareance is unnaceptable: neither it has an icon, nor a help text, so you can't imagine what is it for; unless you are a developper that needed a button to quickly test something in your app, you decisively have to enhance it; something like the first image at the top of this chapter.
+
+#### Adding images.
