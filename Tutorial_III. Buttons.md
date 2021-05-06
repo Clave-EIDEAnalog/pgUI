@@ -1,4 +1,5 @@
 
+
 ## Tutorial_III. Buttons
 
 # Currently being in preparation!
@@ -35,4 +36,4 @@ This will suffice: now you may instate a button by:
     
 and you will get a game window like this:
 
-
+![](https://user-images.githubusercontent.com/64075009/117265288-603c9100-ae54-11eb-90d0-3a12aa722bb1.png)
