@@ -85,11 +85,24 @@ The point is that pgUI buttons section needs to know TOO if a mouse button has b
 
 and that's all. As pgUI has it's own event detection code, it will detect this *pseudoevent* and examine if a button has been selected.
 
-### 4.3.- Embellishing buttons.
+### 4.3.- Execute binded function.
+
+Once you have refactored your software as stated, pgUI will inform you every time the user presses a button. The way it does is by means of the *pgUIUser.update()* call. This method returns the function associated to the button (remember: *action = playPause* when instancing the button). The complete code will look like this:
+
+        todo = UIUser.update()                              
+        if todo:                                            
+            todo()                                          
+
+
+### 4.4.- Embellishing buttons.
 
 By this time you should have a *pausable* monkey game (try with *pgUI_CHIMP_07_playPause.py* at the CHIMP folder if not). But the button's appareance is unnaceptable: neither it has an icon, nor a help text, so you can't imagine what is it for; unless you are a developper that needed a button to quickly test something in your app, you decisively have to enhance it; something like the first image at the top of this chapter.
 
 #### Adding images.
-**WARNING**: All the image files you intend to use with pgUI have to reside in a folder *'data'* that in turn is into your application folder.
+**WARNING**: All the image files you intend to use with pgUI have to reside in a folder *'data'* that in turn should be into your application folder -the one that holds *pgUI.py* too.
+
+By modifying the instancing line:
 
        UIUser.addButton(action = playPause, images = [image1, image2])
+
+you tell pgUI to use the graphic files *image1* and *image2* for this button. *image1* is the default button look; if you specify an *image2* file, it will be used when you move the mouse over the button, then improving the user feedback. Needless to say, those files have to be of the pygame accepted formats; the most usual any case: *png, bmp, jpg, jpeg, ...*.  
