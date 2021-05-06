@@ -37,3 +37,54 @@ This will suffice: now you may instate a button by:
 and you will get a game window like this:
 
 ![](https://user-images.githubusercontent.com/64075009/117265288-603c9100-ae54-11eb-90d0-3a12aa722bb1.png)
+
+Yes: the button is ugly and has no image or text on it. But it serves for the purpose; see 4.2 'MOUSEBUTTONUP pygame event' next
+
+
+### 4.2.- MOUSEBUTTONUP pygame event.
+
+This paragraph explains the only delicate surgery you have to implement in your code to make pgUI fully operative (just if you include buttons; it's not necessary at all for texts or panels).
+
+A typical pygame loop includes an event queue download and a series of statements to determine what to do depending on the events (that, in many times, are the continuation to the user inputs via mouse, keyboard, joystick, ...). The original monkey game one is:
+
+    # Main Loop
+    going = True
+    while going:
+        clock.tick(60)
+
+        # Handle Input Events
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                going = False
+            elif event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE:
+                going = False
+            elif event.type == pg.MOUSEBUTTONDOWN:
+                if fist.punch(chimp):
+                    punch_sound.play()  # punch
+                    chimp.punched()
+                else:
+                    whiff_sound.play()  # miss
+            elif event.type == pg.MOUSEBUTTONUP:
+                fist.unpunch()
+
+        allsprites.update()
+
+        # Draw Everything
+        screen.blit(background, (0, 0))
+        allsprites.draw(screen)
+        pg.display.flip()
+
+this loop responds to a user request to leave (*event.type == pg.QUIT*; *event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE*) or if the user presses a mouse button (any of them: *event.type == pg.MOUSEBUTTONDOWN*) or releases it (*event.type == pg.MOUSEBUTTONUP*).
+
+The point is that pgUI buttons section needs to know TOO if a mouse button has been released, and the normal procedure using pygame (monkey is a *normal* case) is to discharge completely the event queue (*for event in pg.event.get()*) every loop, such a way that the *pg.MOUSEBUTTONUP* event would disappear without leaving trace. The trick for the pgUI buttons to know whether the user has -pressed and- released a button is to, say, deceive pygame by *retriggering* the event (*pg.MOUSEBUTTONUP*) unconditionally. It's simple:
+
+            elif event.type == pg.MOUSEBUTTONUP:
+                fist.unpunch()
+                evento = event                              ## pgUI addition
+                pg.event.post(evento)                       ## pgUI addition                   
+
+and that's all. As pgUI has it's own event detection code, it will detect this *pseudoevent* and examine if a button has been selected.
+
+### 4.3.- Embellishing buttons.
+
+By this time you shoul have a *pausable* monkey game (try whit 
