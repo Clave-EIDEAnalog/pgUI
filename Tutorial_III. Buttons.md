@@ -112,3 +112,6 @@ By simply specifying it when instancig, a help text will come out when you move 
 
         UIUser.addButton(action = playPause, images = [image1, image2], helpText = 'Play / Pause game')
 
+Finally, your chimp game has to look like this:
+
+https://user-images.githubusercontent.com/64075009/117564412-31205c80-b0ac-11eb-91c9-361e16c43509.mp4
