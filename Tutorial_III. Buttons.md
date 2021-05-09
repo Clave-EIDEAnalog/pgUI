@@ -124,10 +124,12 @@ Should you have readed the tutorial with care, you have a good idea of what pgUI
 
 
 * Texts
-    * Size: you can specify different size for each text.
+    * Size: you can specify different size for each text. 
 
 * Buttons
-    * Position: pgUI places the buttons by default on the top left corner of the pygam window  
+    * Position: pgUI places the first button by default on the top left corner of the pygame window. Additional buttons will be placed next to the existing ones so that you do not need to worry about placing them.
+    * Size: you can specify different size for each button. 
+    * Toggle button: You can specify that the button is 'toggle' type. Those buttons have an internal state True/False that may be consulted within the user program.
 
 
 * Scenario
