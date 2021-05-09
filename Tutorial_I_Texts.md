@@ -23,7 +23,7 @@ You have to instance a pgUI user:
 
 #### 2.2.- Add a text you want to be shown.
 Needless to say, by using pygame you can show texts without using pgUI. The library just eases sowhing them.
-To instance a new text use the *addInfoText* method the user has:
+To instance a new text use the *addInfoText* user method:
 
     UIUser.addInfoText(position = (160, 35),                
                        text = "Chimp says: 'Please do not!'",
@@ -68,7 +68,7 @@ First of all, we have to instance a text that we will modify later according to 
                        colors = [(0,250,0), (255,255,255)])
                        
 
-*position* being selected for the text appearing to the right of the window; we instance the text blank for the moment.
+*position* being selected for the text appearing to the right of the window.
 
 Now, this has nothing to do specifically with the library, we have to find the place where the *chimp* code detects that the user has hitted the monkey. There are several places: we will use the 'if fist.punch(chimp):' statement -inside the main loop- to update a counter 'hits = hits + 1' (this *hits* counter has to be previously initializated somewhere to '0').
 
@@ -80,7 +80,7 @@ Once we have a counter (*hits*) we need just to show it. For such purpose we wil
                     hits = hits + 1                                 # New code
                     UIUser.setInfoText(1, "hits .." + str(hits))    # New code
                     
-(The "1" - *UIUser.setInfoText(1, "hits .." + str(hits))*- stands for the pgUI text **number 1**: pgUI assigns to every text you instance a number to further address it)                 
+(The "1" - *UIUser.setInfoText(1, "hits .." + str(hits))*- stands for the **pgUI text number 1**: pgUI assigns to every text you instance a number to further address it)                 
 
 ![](https://user-images.githubusercontent.com/64075009/116856164-f2e1f380-abfa-11eb-993a-bc0c2f94cd06.png)
 
