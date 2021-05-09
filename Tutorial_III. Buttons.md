@@ -114,4 +114,6 @@ By simply specifying it when instancig, a help text will come out when you move 
 
 Finally, your chimp game has to look like this:
 
-https://user-images.githubusercontent.com/64075009/117564412-31205c80-b0ac-11eb-91c9-361e16c43509.mp4
+
+https://user-images.githubusercontent.com/64075009/117564512-ac820e00-b0ac-11eb-86da-f3600090e004.mp4
+
