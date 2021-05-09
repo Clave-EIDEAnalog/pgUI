@@ -12,7 +12,7 @@ Finally, pgUI will ease you to the always hard task of adding a button to your p
 Monkey with *play - pause* options.
 
 ### 4.1.- *Press* buttons.
-A *press* button is a button that has a function associated, such a way that every time you press it the binded function in your code will be executed. It will allow you to start/stop the game, change parameters, display things or whatever you like.
+A *press* button is a button that has a function associated, such a way that every time you press it the binded function in your code may be executed. It will allow you to start/stop the game, change parameters, display things or whatever you like.
 
 We have designed pgUI such a way that you may add widgets to your project by using the minimum amount of effort and time: let's say that you actually want a single button to pause/restart the game (not exactly the image above: just one button). You write a function -inside the *chimp.py* code- that toggles a variable -say *pause*- in between *True* and *False* and make the changes needed to achieve what you want; something like:
 
@@ -116,4 +116,20 @@ Finally, your chimp game has to look like this:
 
 
 ![vokoscreen-2021-05-09_09-58-28](https://user-images.githubusercontent.com/64075009/117564617-36ca7200-b0ad-11eb-8fce-e77d7f09a54c.gif)
+
+
+## 5.- Other features.
+
+Should you have readed the tutorial with care, you have a good idea of what pgUI can do for you. To ease it -the tutorial- we have ommited some of the pgUI performances:
+
+
+* Texts
+    * Size: you can specify different size for each text.
+
+* Buttons
+    * Position: pgUI places the buttons by default on the top left corner of the pygam window  
+
+
+* Scenario
+* Error (Exceptions) catching and managing.
 
