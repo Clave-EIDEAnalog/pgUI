@@ -96,7 +96,7 @@ Once you have refactored your software as stated, pgUI will inform you every tim
 
 ### 4.4.- Embellishing buttons.
 
-By this time you should have a *pausable* monkey game (try with *pgUI_CHIMP_07_playPause.py* at the CHIMP folder if not). But the button's appareance is unnaceptable: neither it has a reasonable look -icon-, nor a help text, so you can't imagine what is it for; unless you are a developper that need a button to quickly test something in your app, you decisively have to enhance it; something like the first image at the top of this chapter.
+By this time you should have a *pausable* monkey game (try with *pgUI_CHIMP_07_playPause.py* at the CHIMP folder if not). But the button's appareance is unnaceptable: neither it has a reasonable look -icon-, nor a help text, so you can't imagine what is it for; unless you are a developper that needs a button to quickly test something in your app, you decisively have to enhance it; something like the first image at the top of this chapter.
 
 #### Adding images.
 **WARNING**: All the image files you intend to use with pgUI have to reside in a folder *'data'* that in turn should be into your application folder -the one that holds *pgUI.py* too.
@@ -110,7 +110,7 @@ you tell pgUI to use the graphic files *image1* and *image2* for this button. *i
 #### Adding *helpText*.
 By simply specifying it when instancig, a help text will come out when you move the mouse over the button:
 
-        UIUser.addButton(action = playPause, images = [image1, image2], helpText = 'Play / Pause game')
+        UIUser.addButton(action = playPause, images = [GLASSY.jpeg], helpText = 'Play/Pause')
 
 Finally, your chimp game has to look like this:
 
