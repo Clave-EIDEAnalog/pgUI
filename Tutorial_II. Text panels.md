@@ -1,7 +1,6 @@
 
 ## Tutorial_II. Text panels.
 
-# Currently being in preparation!
 
 ## 3.- Text panels.
 Last tutorial has tought you to insert texts in the pygame window and how to modify them so that the texts show how your game skills progress. By using those *infoTexts* and having a bit of patience you may get also something this stylish:
@@ -10,15 +9,15 @@ Last tutorial has tought you to insert texts in the pygame window and how to mod
 
 which shows a complete set of information on the matter.
 
-To do it by using the tools described in the last paragraph is a bit clumsy: you have to calculate widths and heights of texts so that they appear perfectly aligned into columns.
+To do it by using the tools described in *Tutorial 1* is a bit clumsy: you have to calculate widths and heights of texts so that they appear perfectly aligned into columns.
 
-pgUI has a class *textPanel* which takes charge of placing things so that you can forget about the hard part of the task: you just tell pgUI which texts -fixed: left column; variable: right column- you want to form the panel, the position of the panel, size and colors to use and *voilá*, pgUI organizes it all so that you can concentrate again on your scenario. (Nevertheless, it may happen that you do not plan to use many *text panels* and prefer to build one by using just *infoText*: it works exactly the same; you can skip the rest of the chapter)
+pgUI has a class *textPanel* which takes charge of placing things so that you can forget about the hard part of the task: you just tell pgUI which texts -fixed: left column; variable: right column- you want in the panel, the position of it, the size and colors to use and *voilá*, pgUI organizes it all so that you can concentrate again on your scenario. (It may happen that you do not plan to use many *text panels* and prefer to build one by using just *infoText*: it works exactly the same; you can skip the rest of the chapter)
 
 ## 3.1.- Passing functions as arguments.
-In this tutorial we take for granted that the reader has a solid basis on python/pygame. Nevertheless, we deem appropiate to insist in that, as almost everything in python, a function is an object too, and as such, it can be passed as an argument to another function or method. This property is in the root of how to instance a text panel.
+In this tutorial we take for granted that the reader has a solid basis on python/pygame. Nevertheless, we deem appropiate to insist in that, as almost everything in python, a function is an object too, and as such, it can be passed as an argument to another function or method. This python feature is in the root of how to instance a text panel.
 
 ## 3.2.- Building the whole text panel.
-Let's see how to build the text panel on the chimp game above: the nucleus of the issue is building two lists, one with the texts on the first column -fixed texts- and other with the variable texts; this one is made up not by texts, but for functions that return the desired text -the variable text to be shown-.
+Let's see how to build the text panel on the chimp game above: the nucleus of the issue is building two lists, one with the texts on the first column -fixed texts- and other with the variable texts; this one is made up not by texts, but for functions that return the desired texts -the variable texts to be shown-.
 
 This is the code:
 
@@ -34,9 +33,9 @@ This is the code:
     
     textPanelT = ["Total hits", "Total trials", "Success"]
 
-There are three functions that return the value to be shown: while the two first ones *just* return the variable, the other performs a previous calculation and then returns the value. Remember: the important thing is that the function returns the *thing* to be shown, either if it -the function- calculates it or not. The three functions are then collected into a list: *textPanelF*.
+There are three functions that return the value to be shown: while the two first ones *just* return the variable, the other performs a previous calculation and then returns the value. Remember: the important thing is that the function returns *what has* to be shown, either if it -the function- calculates it or not. The three functions are then collected into a list: *textPanelF*.
 
-Other list -*textPanelT*- has the three headers for the variable texts. Needless to say, they are ordered the same.
+Other list -*textPanelT*- has the three headers for the variable texts. Needless to say, they have to be ordered the same.
 
 Once we have the two lists, the instantiation of the panel is like this:
 
