@@ -68,9 +68,9 @@ First of all, we have to instance a text that we will modify later according to 
                        colors = [(0,250,0), (255,255,255)])
                        
 
-*position* being selected for the text appearing to the right of the window.
+*position* being calculated for the text appearing to the right of the window.
 
-Now, this has nothing to do specifically with the library, we have to find the place where the *chimp* code detects that the user has hitted the monkey. There are several places: we will use the 'if fist.punch(chimp):' statement -inside the main loop- to update a counter 'hits = hits + 1' (this *hits* counter has to be previously initializated somewhere to '0').
+Now, this has nothing to do specifically with the library, we have to find the place where the *chimp* code detects that the user has hitted the monkey. There are several options: we will use the 'if fist.punch(chimp):' statement -inside the main loop- to update a counter 'hits = hits + 1' (this *hits* counter has to be previously initializated somewhere to '0').
 
 Once we have a counter (*hits*) we need just to show it. For such purpose we will *set* the previously instated text by means of the *setInfoText* method. The line of code may be placed just next to the counter updating; the code looking like that:
 
