@@ -1,8 +1,6 @@
 
 ## Tutorial_I. Install pgUI. Texts.
 
-# Currently being in preparation!
-
 ### 1.- Install pgUI.
 Installing pgUI does not need a special procedure. Just download or copy-paste the file **pgUI.py** to your working folder; once done, all pgUI functions are available by importing it:
 
