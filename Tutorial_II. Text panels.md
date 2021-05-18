@@ -35,6 +35,7 @@ This is the code:
 
 There are three functions that return the value to be shown: while the two first ones *just* return the variable, the other performs a previous calculation and then returns the value. Remember: the important thing is that the function returns *what has* to be shown, either if it -the function- calculates it or not. The three functions are then collected into a list: *textPanelF*.
 
+
 Other list -*textPanelT*- has the three headers for the variable texts. Needless to say, they have to be ordered the same.
 
 Once we have the two lists, the instantiation of the panel is like this:
@@ -57,7 +58,7 @@ You don't need to specifically update the panel; the *general* pgUI update comma
 takes care of it. Your code just needs to update the variables to be shown (see 2.3 and 2.4)
 
 
-
+![vokoscreen-2021-05-18_15-23-48](https://user-images.githubusercontent.com/64075009/118659062-46546400-b7ed-11eb-8df9-a7bbc406b428.gif)
 
 
 
