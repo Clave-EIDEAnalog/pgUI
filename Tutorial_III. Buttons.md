@@ -120,16 +120,25 @@ Finally, your chimp game has to look like this:
 
 ## 5.- Other features.
 
-Should you have readed the tutorial with care, you have a good idea of what pgUI can do for you. To ease it -the tutorial- we have ommited some of the pgUI performances:
+Should you have readed the tutorial with care, you have a good idea of what pgUI can do for you. To ease it -the tutorial- we have ommited some of the pgUI performances (a complete reference manual is in preparation):
 
 
 * Texts
     * Size: you can specify different size for each text. 
 
 * Buttons
-    * Position: pgUI places the first button by default on the top left corner of the pygame window. Additional buttons will be placed next to the existing ones so that you do not need to worry about placing them.
+    * Default position: pgUI places the first button by default on the top left corner of the pygame window. Additional buttons will be placed next to the existing ones so that you do not need to worry about placing them.
+    * Position: You can specify any position for the button within the window
     * Size: you can specify different size for each button. 
-    * Toggle button: You can specify that the button is 'toggle' type. Those buttons have an internal state True/False that may be consulted within the user program.
+    * Toggle button: You can specify that the button is 'toggle' type. Those buttons have an internal state True/False -updated and kept by pgUI- that may be consulted within the user program.
+
+* Text panels
+    * Size: you can specify different size for every text panel.
+    * Hide/show text panel: the text panel may be defined as *concealable*. Concealable panels may be removed from the window by means of an associated *toggle* button.
+    * Colors: both text and background colors may be set by the user.
+
+ 
+
 
 
 * Scenario
