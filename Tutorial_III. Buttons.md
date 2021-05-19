@@ -76,7 +76,7 @@ A typical pygame loop includes an event queue download and a series of statement
 
 this loop responds to a user request to leave (*event.type == pg.QUIT*; *event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE*) or if the user presses a mouse button (any of them: *event.type == pg.MOUSEBUTTONDOWN*) or releases it (*event.type == pg.MOUSEBUTTONUP*).
 
-The point is that pgUI buttons section needs to know TOO if a mouse button has been released, and the normal procedure using pygame (monkey is a *normal* case) is to discharge completely the event queue (see above: *for event in pg.event.get()*) every loop, such a way that the *pg.MOUSEBUTTONUP* event would disappear from the queue whether or not the user has selected a button. The trick for the pgUI buttons to know whether the user has -pressed and- released a button is to, say, deceive pygame by *retriggering* the event (*pg.MOUSEBUTTONUP*) unconditionally. It's simple:
+The point is that pgUI buttons section needs to know TOO if a mouse button has been released. The normal procedure using pygame (CHIMP game is a *normal* case) is to discharge completely the event queue (see above: *for event in pg.event.get()*) every loop, such a way that the *pg.MOUSEBUTTONUP* event would disappear from the queue whether or not the user has selected a button. The trick for the **pgUI buttons** to know whether the user has -pressed and- released a button is to, say, deceive pygame by *retriggering* the event (*pg.MOUSEBUTTONUP*) unconditionally. It's simple:
 
             elif event.type == pg.MOUSEBUTTONUP:
                 fist.unpunch()
@@ -87,7 +87,7 @@ and that's all. As pgUI has it's own event detection code, it will detect next t
 
 ### 4.3.- Execute binded function.
 
-Once you have refactored your software as stated, pgUI will inform you every time the user presses a button. The way it does is by means of the *pgUIUser.update()* call. This method returns the function associated to the button (remember: *action = playPause* when instancing the button). The complete code will look like this:
+Once you have refactored your software as stated, pgUI will inform you every time the user presses a button. The way it does is, again, by means of the *pgUIUser.update()* call. This method returns the function associated to the button (remember: *action = playPause* when instancing the button). The complete code will look like this:
 
         todo = UIUser.update()                              
         if todo:                                            
@@ -96,7 +96,7 @@ Once you have refactored your software as stated, pgUI will inform you every tim
 
 ### 4.4.- Embellishing buttons.
 
-By this time you should have a *pausable* monkey game (try with *pgUI_CHIMP_07_playPause.py* at the CHIMP folder if not). But the button's appareance is unnaceptable: neither it has a reasonable look -icon-, nor a help text, so you can't imagine what is it for; unless you are a developper that needs a button to quickly test something in your app, you decisively have to enhance it; something like the first image at the top of this chapter.
+By this time you should have a *pausable* monkey game (try with *pgUI_CHIMP_07_playPause.py* at the CHIMP folder if not). But the button's appareance is aestetically unnaceptable: neither it has a reasonable look -icon-, nor a help text, so you can't imagine what is it for; unless you are a developper that needs a button to quickly test something in your app, you decisively have to enhance it; something like the first image at the top of this chapter.
 
 #### Adding images.
 **WARNING**: All the image files you intend to use with pgUI have to reside in a folder *'data'* that in turn should be into your application folder -the one that holds *pgUI.py* too.
@@ -105,7 +105,7 @@ By modifying the instancing line:
 
        UIUser.addButton(action = playPause, images = [image1, image2])
 
-you tell pgUI to use the graphic files *image1* and *image2* for this button. *image1* is the default button look; if you specify an *image2* file, it will be used when you move the mouse over the button, then improving the user feedback. Needless to say, those files have to be of the pygame accepted formats; the most usual any case: *png, bmp, jpg, jpeg, ...*. 
+you tell pgUI to use the graphic files *image1* and *image2* for this button. *image1* is the default button look; if you specify an *image2* file, it will be used when you move the mouse over the button, then improving the user feedback. Needless to say, those files have to be a pygame accepted format; the most usual any case: *png, bmp, jpg, jpeg, ...*. 
 
 #### Adding *helpText*.
 By simply specifying it when instancig, a help text will come out when you move the mouse over the button:
