@@ -133,14 +133,14 @@ Should you have readed the tutorial with care, you have a good idea of what pgUI
     * Toggle button: You can specify that the button is 'toggle' type. Those buttons have an internal state True/False -updated and kept by pgUI- that may be consulted within the user program.
 
 * Text panels
-    * Size: you can specify different size for every text panel.
+    * Size: you can specify different font size for every text panel.
     * Hide/show text panel: the text panel may be defined as *concealable*. Concealable panels may be removed from the window by means of an associated *toggle* button.
     * Colors: both text and background colors may be set by the user.
 
- 
-
-
 
 * Scenario
-* Error (Exceptions) catching and managing.
+    * Configuration parameters (those referring to buttons, texts, pannels, ...) may be grouped into a set of dictionaries (that, in turn, may be the only contents of a python file that acts as a *configuration file*). Such a procedure isolates the *client* python file from the parameters for similar projects.
+    
+* Error (Exceptions) handling.
+    * pgUI has code to catch and manage errors, so that developpers are informed on the specific error (mainly wrong parameters, invalid files, ...) and may develop their own code to further inform eventual users.
 
