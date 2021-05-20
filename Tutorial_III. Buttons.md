@@ -2,7 +2,6 @@
 
 ## Tutorial_III. Buttons
 
-# Currently being in preparation!
 
 ## 4.- Buttons.
 Finally, pgUI will ease you to the always hard task of adding a button to your project. Something like this:
